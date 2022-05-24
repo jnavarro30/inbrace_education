@@ -1,11 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import NavHeader from "./components/nav_header";
+import SidePanel from "./components/info_side_panel";
 
 function App() {
   return (
-    <div className="border-2 m-4">
-      Hello
+    <div className="h-screen" style={{background: "#1F2248"}}>
+      <NavHeader />
+      <SidePanel />
     </div>
   );
 }
