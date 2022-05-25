@@ -2,19 +2,26 @@ import { Accordion } from '@mantine/core';
 import ItemLabel from './accordion-item-label';
 
 function StagesAccordion() {
+  const accordianItems = [
+    {
+      "label": "Intro",
+      "info": "Welcome to inbrace!"
+    },
+    {
+      "label": "Wizard",
+      "info": "Custom 3 matic steps"
+    }
+  ];
+
   return (
     <Accordion>
-      <Accordion.Item label={<ItemLabel />}>
-        Colors, fonts, shadows and many other parts are customizable to fit your design needs
-      </Accordion.Item>
-
-      <Accordion.Item label="Flexibility">
-        Configure components appearance and behavior with vast amount of settings or overwrite any part of component styles
-      </Accordion.Item>
-
-      <Accordion.Item label="No annoying focus ring">
-        With new :focus-visible pseudo-class focus ring appears only when user navigates with keyboard
-      </Accordion.Item>
+      {
+        accordianItems.map((item, index) => (
+          <Accordion.Item label={<ItemLabel itemLabel={item.label} />} key={index}>
+            <p className="text-white">{item.info}</p>
+          </Accordion.Item>
+        ))
+      }
     </Accordion>
   );
 }

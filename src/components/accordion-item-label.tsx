@@ -1,8 +1,12 @@
 import { Text } from '@mantine/core';
 
-function ItemLabel () {
+interface ItemProps {
+    itemLabel: string
+}
+
+function ItemLabel ({ itemLabel }: ItemProps) {
     return (
-        <Text color="white">Custom</Text>
+        <Text color="white">{itemLabel}</Text>
     )
 }
 
