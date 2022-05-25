@@ -12,6 +12,7 @@ import {
 } from "@mantine/core";
 
 import StagesAccordion from "./stages-accordion";
+import QuickNotes from "./quick-notes";
 
 export default function EducationAppShell() {
   const theme = useMantineTheme();
@@ -70,7 +71,7 @@ export default function EducationAppShell() {
         </Header>
       }
     >
-        
+      <QuickNotes />
       <Text>Resize app to see responsive navbar in action</Text>
     </AppShell>
   );
