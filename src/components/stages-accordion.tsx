@@ -1,9 +1,10 @@
 import { Accordion } from '@mantine/core';
+import ItemLabel from './accordion-item-label';
 
 function StagesAccordion() {
   return (
     <Accordion>
-      <Accordion.Item label="Customization">
+      <Accordion.Item label={<ItemLabel />}>
         Colors, fonts, shadows and many other parts are customizable to fit your design needs
       </Accordion.Item>
 

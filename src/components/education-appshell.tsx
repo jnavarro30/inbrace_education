@@ -18,12 +18,13 @@ export default function EducationAppShell() {
   const [opened, setOpened] = useState(false);
   return (
     <AppShell
+      className="text-white"  
       styles={{
         main: {
           background:
             theme.colorScheme === "dark"
               ? theme.colors.dark[8]
-              : theme.colors.gray[0],
+              : "#1F2248",
         },
       }}
       navbarOffsetBreakpoint="sm"
@@ -31,6 +32,7 @@ export default function EducationAppShell() {
       fixed
       navbar={
         <Navbar
+          style={{background: "#50A3A9"}}
           p="md"
           hiddenBreakpoint="sm"
           hidden={!opened}
@@ -46,7 +48,9 @@ export default function EducationAppShell() {
         </Footer>
       }
       header={
-        <Header height={70} p="md">
+        <Header className="bg-black text-white flex md:justify-center items-end" height={70} p="md">
+            <div className="font-bold text-2xl mr-4">inbrace</div>
+            <div className="ml-2 mr-4">education</div>
           <div
             style={{ display: "flex", alignItems: "center", height: "100%" }}
           >
@@ -59,12 +63,14 @@ export default function EducationAppShell() {
                 mr="xl"
               />
             </MediaQuery>
-
-            <Text>inbrace education</Text>
+            
+            
+            
           </div>
         </Header>
       }
     >
+        
       <Text>Resize app to see responsive navbar in action</Text>
     </AppShell>
   );
