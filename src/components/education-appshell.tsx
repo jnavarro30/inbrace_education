@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 
 import StagesAccordion from "./stages-accordion";
-import QuickNotes from "./quick-notes";
+import QuickNotes from "./notes/quick-notes";
 
 export default function EducationAppShell() {
   const theme = useMantineTheme();
