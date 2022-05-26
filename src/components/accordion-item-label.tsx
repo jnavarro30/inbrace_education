@@ -6,7 +6,7 @@ interface ItemProps {
 
 function ItemLabel ({ itemLabel }: ItemProps) {
     return (
-        <Text color="white">{itemLabel}</Text>
+        <Text className="hover:text-black font-bold" size="xl" color="white">{itemLabel}</Text>
     )
 }
 

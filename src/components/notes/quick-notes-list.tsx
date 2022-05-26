@@ -2,19 +2,36 @@ import { List, ThemeIcon } from '@mantine/core';
 import { CircleCheck, CircleDashed } from 'tabler-icons-react';
 
 function NoteList() {
+  const noteItems = [
+      "Review case details in portal",
+      "Import study to 3-Matic Wizard",
+      "Ignore missing U/L parts",
+      "Import Gen ll brackets",
+      "Indicate base points",
+      "Note BFL's",
+      "Check for collision",
+      "Export measurements",
+      "Close/Open 3-matic",
+      "Organize files",
+      "Run 3-Matic Script",
+      "Uploaded files to portal",
+      "Upload to Dropbox",
+      "Submit"
+  ];
+
   return (
-    <List type="ordered"
+    <List className="grid grid-cols-2" type="ordered"
     icon={
         <ThemeIcon color="teal" size={24} radius="xl">
           <CircleCheck size={16} />
         </ThemeIcon>
       }
     >
-      <List.Item>Clone or download repository from GitHub</List.Item>
-      <List.Item>Install dependencies with yarn</List.Item>
-      <List.Item>To start development server run npm start command</List.Item>
-      <List.Item>Run tests to make sure your changes do not break the build</List.Item>
-      <List.Item>Submit a pull request once you are done</List.Item>
+      {
+        noteItems.map((note, index) => (
+          <List.Item>{note}</List.Item>
+        ))
+      }
     </List>
   );
 }
