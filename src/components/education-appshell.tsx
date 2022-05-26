@@ -3,8 +3,6 @@ import {
   AppShell,
   Navbar,
   Header,
-  Footer,
-  Aside,
   Text,
   MediaQuery,
   Burger,
@@ -13,6 +11,7 @@ import {
 
 import StagesAccordion from "./stages-accordion";
 import QuickNotes from "./notes/quick-notes";
+import Stage1PortalReview from "./stage_1/portal/portal_review";
 
 export default function EducationAppShell() {
   const theme = useMantineTheme();
@@ -39,14 +38,9 @@ export default function EducationAppShell() {
           hidden={!opened}
           width={{ sm: 200, lg: 300 }}
         >
-          <Text>STAGE l</Text>
+          <div className="text-center">STAGE l</div>
           <StagesAccordion />
         </Navbar>
-      }
-      footer={
-        <Footer height={60} p="md">
-          Application footer
-        </Footer>
       }
       header={
         <Header className="bg-black text-white flex md:justify-center items-end" height={70} p="md">
@@ -71,7 +65,9 @@ export default function EducationAppShell() {
         </Header>
       }
     >
+      <h1 className="mx-auto text-center font-bold p-2">Cliff Notes</h1>
       <QuickNotes />
+      <Stage1PortalReview />
       <Text>Resize app to see responsive navbar in action</Text>
     </AppShell>
   );

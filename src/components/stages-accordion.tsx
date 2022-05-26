@@ -4,7 +4,7 @@ import ItemLabel from './accordion-item-label';
 function StagesAccordion() {
   const accordianItems = [
     {
-      "label": "Intro",
+      "label": "Portal",
       "info": "Welcome to inbrace!"
     },
     {
